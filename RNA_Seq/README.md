@@ -89,6 +89,8 @@ Visualization and functional analyses include:
 
 Script: ```scripts/03_deg_visualization_and_enrichment.R``` and ```scripts/04_GSEA_heatmap.R```
 
+The full analysis workflow is available in scripts/* and notebooks/RNAseq_analysis.Rmd
+
 ## Reproducibility
 
 All analyses were performed using R.
