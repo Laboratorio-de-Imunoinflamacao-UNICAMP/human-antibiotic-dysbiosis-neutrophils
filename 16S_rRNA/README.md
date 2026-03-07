@@ -65,7 +65,7 @@ Main steps include:
 - taxon-level differential abundance analysis using ALDEx2
 - PICRUSt2-based functional prediction and differential pathway abundance analysis
 
-The full analysis workflow is available in ```scripts/*``` and ```notebooks/16S_Human-Dysbiosis-Analysis.Rmd```
+The full analysis workflow is available in ```scripts/*``` and ```notebooks/16S_microbiota_analysis.Rmd```
 
 ## Data availability
 
