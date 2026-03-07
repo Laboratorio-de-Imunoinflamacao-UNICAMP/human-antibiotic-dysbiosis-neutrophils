@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+S8T1C,RawData/S8T1C_1.fq.gz,RawData/S8T1C_2.fq.gz,auto
+S8T1L,RawData/S8T1L_1.fq.gz,RawData/S8T1L_2.fq.gz,auto
+S8T2C,RawData/S8T2C_1.fq.gz,RawData/S8T2C_2.fq.gz,auto
+S8T2L,RawData/S8T2L_1.fq.gz,RawData/S8T2L_2.fq.gz,auto
+S9T1C,RawData/S9T1C_1.fq.gz,RawData/S9T1C_2.fq.gz,auto
+S9T1L,RawData/S9T1L_1.fq.gz,RawData/S9T1L_2.fq.gz,auto
+S9T2C,RawData/S9T2C_1.fq.gz,RawData/S9T2C_2.fq.gz,auto
+S9T2L,RawData/S9T2L_1.fq.gz,RawData/S9T2L_2.fq.gz,auto
+S11T1C,RawData/S11T1C_1.fq.gz,RawData/S11T1C_2.fq.gz,auto
+S11T1L,RawData/S11T1L_1.fq.gz,RawData/S11T1L_2.fq.gz,auto
+S11T2C,RawData/S11T2C_1.fq.gz,RawData/S11T2C_2.fq.gz,auto
+S11T2L,RawData/S11T2L_1.fq.gz,RawData/S11T2L_2.fq.gz,auto
