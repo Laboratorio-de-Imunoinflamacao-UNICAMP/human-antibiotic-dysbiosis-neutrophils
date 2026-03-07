@@ -1,0 +1,112 @@
+---
+title: "ATAC-seq Analysis"
+author: "Bruna Toledo"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.width = 8,
+  fig.height = 5
+)
+```
+
+# Overview
+
+This notebook documents the ATAC-seq analysis workflow used in the study.
+
+It is designed as a lightweight execution notebook that calls the modular scripts stored in:
+
+`ATAC_seq/scripts/`
+
+The full workflow includes:
+
+1. removal of unwanted variation from consensus peak counts  
+2. differential accessibility analysis and genomic annotation  
+3. PCA visualization  
+4. gene-level accessibility heatmap  
+5. GREAT enrichment analysis  
+6. motif enrichment analysis  
+7. motif enrichment plotting for TFs that are also RNA-seq DEGs  
+8. ATAC–RNA integration analysis  
+
+# Recommended repository structure
+
+# Important note
+
+This notebook assumes that the project files are organized exactly as expected by the scripts.
+Each section below executes one script using `source()`.
+
+# 1. Remove unwanted variation
+
+This step imports consensus peak counts, filters low-count peaks, performs normalization, and estimates unwanted variation factors with RUVSeq.
+
+```{r step-01}
+source("../scripts/01_remove_unwanted_variation.R")
+```
+
+# 2. Differential accessibility and annotation
+
+This step identifies differential accessible regions (DARs), annotates peaks, and summarizes genomic region classes.
+
+```{r step-02}
+source("../scripts/02_differential_accessibility_and_annotation.R")
+```
+
+# 3. PCA visualization
+
+This step generates PCA plots from normalized ATAC-seq accessibility counts.
+
+```{r step-03}
+source("../scripts/03_pca_visualization.R")
+```
+
+# 4. Heatmap of accessibility
+
+This step aggregates normalized accessibility to gene level and generates a heatmap with genomic region annotations.
+
+```{r step-04}
+source("../scripts/04_heatmap_accessibility.R")
+```
+
+# 5. GREAT enrichment
+
+This step performs GREAT enrichment analysis on differentially accessible regions.
+
+```{r step-05}
+source("../scripts/05_great_enrichment.R")
+```
+
+# 6. Motif enrichment
+
+This step evaluates TF motif enrichment across DARs stratified by genomic region.
+
+```{r step-06}
+source("../scripts/06_motif_enrichment.R")
+```
+
+# 7. Motif enrichment plot restricted to RNA-seq TF DEGs
+
+This step visualizes motif enrichment restricted to transcription factors that are also differentially expressed in RNA-seq.
+
+```{r step-07}
+source("../scripts/07_motif_enrichment_deg_tfs_plot.R")
+```
+
+# 8. ATAC–RNA integration
+
+This step integrates DARs with RNA-seq DEGs and performs GREAT enrichment by integration category.
+
+```{r step-08}
+source("../scripts/08_atac_rna_correlation.R")
+```
+
+# Session information
+
+```{r session-info}
+sessionInfo()
+```
