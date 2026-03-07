@@ -1,0 +1,14 @@
+input_folder: RawData_run
+metadata: ./metadata.tsv
+outdir: ./results_run
+extension: /*_{1,2}.fq.gz
+multiple_sequencing_runs: true
+dada_ref_tax_custom: silva_nr99_v138.1_wSpecies_train_set.fa.gz
+dada_ref_tax_custom_sp: silva_species_assignment_v138.1.fa
+kraken2_ref_taxonomy: silva=138
+trunclenf: 0
+trunclenr: 0
+exclude_taxa: mitochondria,chloroplast,archaea
+min_frequency :2
+min_samples: 2
+picrust: true
