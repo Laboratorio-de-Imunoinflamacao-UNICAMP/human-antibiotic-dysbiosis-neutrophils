@@ -67,6 +67,12 @@ Main steps include:
 
 The full analysis workflow is available in ```scripts/*``` and ```notebooks/16S_microbiota_analysis.Rmd```
 
+## Reproducibility
+
+All analyses were performed using R.
+
+The computational environment can be reproduced using ```sessionInfo()``` included at the end of the scripts.
+
 ## Data availability
 
 Raw sequencing data are available in NCBI BioProject: PRJNA1402306
