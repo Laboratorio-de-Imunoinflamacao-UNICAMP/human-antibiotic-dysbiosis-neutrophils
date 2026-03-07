@@ -69,8 +69,6 @@ The full analysis workflow is available in ```scripts/*``` and ```notebooks/16S_
 
 ## Reproducibility
 
-All analyses were performed using R.
-
 The computational environment can be reproduced using ```sessionInfo()``` included at the end of the scripts.
 
 ## Data availability
