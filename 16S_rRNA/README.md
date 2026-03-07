@@ -62,8 +62,8 @@ Main steps include:
 - Alpha diversity analysis
 - Beta diversity analysis
 - Taxonomic composition visualization
-- Differential abundance testing
-- Functional prediction
+- taxon-level differential abundance analysis using ALDEx2
+- PICRUSt2-based functional prediction and differential pathway abundance analysis
 
 The full analysis workflow is available in ```scripts/*``` and ```notebooks/16S_Human-Dysbiosis-Analysis.Rmd```
 
