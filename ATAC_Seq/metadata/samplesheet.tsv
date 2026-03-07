@@ -1,0 +1,7 @@
+file	sample	subject	condition	batch
+Pre-Abx_REP1.mLb.clN.sorted.bam	Pre-Abx_S8	S8	Pre-Abx	A
+Post-Abx_REP1.mLb.clN.sorted.bam	Post-Abx_S8	S8	Post-Abx	A
+Pre-Abx_REP2.mLb.clN.sorted.bam	Pre-Abx_S9	S9	Pre-Abx	B
+Post-Abx_REP2.mLb.clN.sorted.bam	Post-Abx_S9	S9	Post-Abx	B
+Pre-Abx_REP3.mLb.clN.sorted.bam	Pre-Abx_S11	S11	Pre-Abx	A
+Post-Abx_REP3.mLb.clN.sorted.bam	Post-Abx_S11	S11	Post-Abx	A
