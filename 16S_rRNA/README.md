@@ -1,0 +1,73 @@
+## 16S rRNA analysis
+
+This folder contains the microbiota analysis workflow.
+
+## Overview
+
+This directory contains the analysis workflow used to characterize gut microbiota changes following short-term antibiotic treatment in healthy adults.
+
+The analysis aimed to:
+- quantify antibiotic-induced microbiota disruption
+- identify taxonomic shifts associated with dysbiosis
+- evaluate changes in microbial diversity
+- predict functional profiles
+
+Paired stool samples were collected before and after antibiotic exposure and analyzed using 16S rRNA amplicon sequencing (V3-V4).
+
+## Workflow Overview
+
+The analysis consists of two major stages:
+
+### 1. Raw sequence processing
+
+Amplicon reads were processed using nf-core/ampliseq.
+
+Steps include:
+- Quality control
+- Denoising and ASV inference (DADA2)
+- Chimera removal
+- Taxonomic classification (SILVA reference database (v138))
+- Filtering of non-bacterial taxa
+- Generation of feature tables and taxonomy assignments
+- Functional prediction using PICRUSt
+
+The pipeline was executed using Nextflow with Docker containers.
+
+See ```run_nextflow.sh``` for execution command and ```params.yaml``` for pipeline parameters. 
+
+### Input Files
+
+#### Raw sequencing reads
+
+Paired-end FASTQ files:
+- *_R1.fq.gz
+- *_R2.fq.gz
+
+#### Metadata
+
+Sample metadata are provided in ```metadata/metadata.tsv```
+
+This file includes:
+- sample ID
+- condition (control: pre antibiotic/ treated: post antibiotic)
+- subject ID
+
+### 2. Downstream analysis
+
+Downstream statistical analyses and visualization were performed in R.
+
+Main steps include:
+- Import ASV tables and taxonomy
+- Construction of phyloseq objects
+- Alpha diversity analysis
+- Beta diversity analysis
+- Taxonomic composition visualization
+- Differential abundance testing
+- Functional prediction
+
+The full analysis workflow is available in ```scripts/*``` and ```notebooks/16S_Human-Dysbiosis-Analysis.Rmd```
+
+## Data availability
+
+Raw sequencing data are available in:
+NCBI BioProject: PRJNA1402306
